@@ -19,6 +19,12 @@ $pell-content-padding: 10px !default;
   outline: 0;
   overflow-y: auto;
   padding: $pell-content-padding;
+
+  &:empty {
+    &::before {
+      content: attr(data-placeholder);
+    }
+  }
 }
 
 .pell-actionbar {

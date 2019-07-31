@@ -170,6 +170,12 @@ var init = function init(settings) {
   var content = settings.element.content = createElement('div');
   content.contentEditable = true;
   content.className = classes.content;
+  if (settings.placeholder) {
+    content.setAttribute('data-placeholder', settings.placeholder);
+  }
+  if (settings.initialValue) {
+    content.innerHTML = settings.initialValue;
+  }
   content.oninput = function (_ref) {
     var firstChild = _ref.target.firstChild;
 
