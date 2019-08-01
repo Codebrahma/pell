@@ -23,6 +23,7 @@ $pell-content-padding: 10px !default;
   &:empty {
     &::before {
       content: attr(data-placeholder);
+      color: #787878;
     }
   }
 }
